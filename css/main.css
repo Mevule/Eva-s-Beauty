@@ -1,0 +1,625 @@
+/* 
+Fonts:
+Playfair Display: Regular 400, Medium 500, SemiBold 600
+Merienda: Light 300, Regular 400, Medium 500
+Cormorant Garamond: Regular 400
+
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Merienda', cursive;
+font-family: 'Playfair Display', serif;
+
+Colors:
+dark turquoise: #006d77 rgb(0,109,119)
+light turquoise: #83c5be rgb(131,197,190)
+light blue: #edf6f9 rgb(237,246,249)
+light pink: #ffddd2 rgb(255 221 210)
+coral: #e29578 rgb(226,149,120)
+*/
+
+
+/* General styles */
+html {
+  font-family: 'Playfair Display', serif;
+  background-color: #ffddd2;
+  color: #e29578;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  line-height: 1.2;
+}
+
+h1 {
+  color: #006d77;
+  font-size: 3rem;
+  /* 48px/16px */
+  letter-spacing: 0.05em;
+  /* 2.4px/48px */
+  margin: 0;
+  margin-bottom: 1.25rem;
+  /* 2Opx/16px */
+  font-weight: 700;
+  text-transform: uppercase;
+  border-top: solid 6px #006d77;
+  border-bottom: solid 6px #006d77;
+  display: inline-block;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1.625rem;
+  margin-top: 3.5rem;
+  margin-bottom: 2.25rem;
+}
+
+a {
+  color: #006d77;
+  text-decoration: none;
+  padding: 0.25em;
+  font-weight: 600;
+}
+
+em {
+  font-weight: 500;
+  font-style: normal;
+}
+
+p,
+li {
+  margin: 0.5rem 0;
+  line-height: 1.75;
+}
+
+dd,
+dl {
+  margin: 0;
+}
+
+dt {
+  margin-top: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Components */
+.btn {
+  background-color: #edf6f9;
+  font-family: 'Merienda', cursive;
+  color: #e29578;
+  padding: 0.8em 1.5em;
+  text-transform: uppercase;
+  font-weight: 300;
+  border: solid 3px transparent;
+  letter-spacing: 0.1em;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: transparent;
+  border: solid 3px #666;
+  color: #e29578;
+  font-weight: 500;
+}
+
+
+/* Header */
+.main-header {
+  background-color: #e29578;
+}
+
+.main-header__logo {
+  display: block;
+  width: 10rem;
+  margin: 0 auto;
+}
+
+.main-header__logo img {
+  width: 100%;
+}
+
+.main-header__nav ul {
+  display: flex;
+  overflow-x: auto;
+}
+
+.main-header__nav ul li {
+  text-align: center;
+}
+
+.main-header__nav a {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding: 0.5em 0.6em;
+  color: #006d77;
+  white-space: nowrap;
+}
+
+.main-header__nav a:hover,
+.main-header__nav a:active {
+  color: #ffddd2;
+}
+
+
+/* Main Part */
+main {
+  flex-grow: 1;
+}
+
+
+/* Homepage – Hero Area */
+.hero-area {
+  padding: 3rem;
+  text-align: center;
+  background-image: url('../img/cover.jpg');
+  background-size: auto;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-area h2 {
+  color: #000;
+  margin: 0;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.hero-area h1 {
+  color: #000;
+  font-weight: 800;
+}
+
+.hero-area a {
+  color: #000;
+}
+
+
+/* Page Styles */
+
+section {
+  padding: 3rem 0;
+}
+
+section>header {
+  text-align: center;
+}
+
+section>header p {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin-bottom: 2rem;
+}
+
+
+
+/* About */
+.about-section {
+  padding-bottom: 0;
+}
+
+.about-section li::marker {
+  color: #006d77;
+}
+
+.about-section aside {
+  margin-top: 2rem;
+}
+
+.about-section blockquote {
+  padding: 2rem;
+  margin: 0;
+  font-size: 1.2rem;
+  background-image: url('../img/aboutsalon.jpg');
+  background-size: cover;
+}
+
+.about-section blockquote p {
+  font-family: 'Playfair Display', serif;
+  text-align: right;
+  margin-top: 1em;
+  font-size: 0.8em;
+  font-style: normal;
+  display: block;
+}
+
+.about-section q {
+  font-weight: 600;
+}
+
+.about-section blockquote q {
+  position: relative;
+  padding-left: 2.5em;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.about-section blockquote q:before {
+  content: open-quote;
+  font-size: 5em;
+  line-height: 0.8em;
+  color: #006d77;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.about-section blockquote q:after {
+  content: '';
+}
+
+.about-section p,
+ul {
+  color: #006d77;
+}
+
+
+/* Services */
+.services-section article {
+  background-color: #edf6f9;
+  margin: 2rem 0;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: #e29578 10px 10px 0;
+}
+
+.services-section article h2 {
+  margin-top: 1rem;
+}
+
+.services-section article img {
+  width: 6rem;
+  margin-bottom: 2em;
+}
+
+.services-section .st0 {
+  fill: #e29578;
+}
+
+
+/* Prices Section */
+.prices-page {
+  background: url(../img/prices-bg.jpg);
+  padding-bottom: 6rem;
+}
+
+.prices-section h1 {
+  color: #006d77;
+}
+
+.prices-section h2 {
+  color: #006d77;
+  margin-top: 3rem;
+  font-family: 'Merienda', cursive;
+}
+
+.prices-section table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.prices-section td {
+  color: #006d77;
+  padding: 0.65em 0;
+  font-family: 'Merienda', cursive;
+  font-size: 1.4rem;
+}
+
+.prices-section td:nth-child(2) {
+  text-align: right;
+}
+
+.prices-section tr {
+  border-bottom: 2px solid #fff;
+}
+
+.prices-section tr:hover td {
+  color: #e29578;
+}
+
+.prices-section .container {
+  flex-wrap: wrap;
+}
+
+
+/* Contact */
+.contact-section dl {
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.contact-section dd {
+  margin: 0;
+  font-size: 1em;
+  color: #006d77;
+  font-weight: 500;
+}
+
+.contact-section dt {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.contact-section dl strong {
+  font-size: 0.8em;
+  line-height: 1.2;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.contact-section address {
+  font-style: normal;
+}
+
+
+/* Make an Appointment */
+.appointment-section article {
+  background-color: #ffddd2;
+  color: #006d77;
+  padding: 2rem 0;
+  font-weight: 500;
+}
+
+.appointment-section ol {
+  list-style: none;
+  counter-reset: list-counter;
+  padding: 0;
+}
+
+.appointment-section ol li {
+  counter-increment: list-counter;
+  margin-bottom: 1em;
+  line-height: 1.4;
+  display: flex;
+  gap: 1rem;
+}
+
+.appointment-section ol li::before {
+  content: counter(list-counter);
+  display: block;
+  color: #edf6f9;
+  font-weight: 600;
+  background-color: #006d77;
+  border-radius: 50%;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8em;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.appointment-section form {
+  margin: 3rem auto;
+  color: #006d77;
+  font-size: 1em;
+}
+
+.appointment-section form span {
+  color: #006d77;
+}
+
+.appointment-section input:not([type="checkbox"]):not([type="submit"]),
+.appointment-section select,
+.appointment-section textarea {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 2px solid #006d77;
+  padding: 0.6em 0.5em;
+  font-size: 1.1em;
+  background-color: #edf6f9;
+  border-radius: 0;
+}
+
+.appointment-section input:not([type="checkbox"]):not([type="submit"]):focus,
+.appointment-section select:focus,
+.appointment-section textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #006d77;
+}
+
+label:not([for="newsletter"]) {
+  font-size: 0.8em;
+}
+
+label[for="newsletter"] {
+  margin-left: 0.5em;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 580px) {
+  .main-header__nav ul {
+    justify-content: center;
+  }
+
+  section>header.container {
+    max-width: 1000px;
+    margin-bottom: 3rem;
+  }
+
+  .about-section aside {
+    display: flex;
+  }
+
+  .about-section aside img {
+    width: 50%;
+  }
+
+  .about-section aside blockquote {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services-section>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
+  }
+
+  .services-section article {
+    width: 250px;
+    flex-grow: 1;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .main-header .container,
+  .main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-header__logo {
+    margin: 0;
+    position: relative;
+    top: 2rem;
+    margin-top: -2rem;
+  }
+
+  .main-header__nav {
+    margin: 0
+  }
+
+  .main-header__nav a {
+    font-size: 1.1rem;
+  }
+
+  .main-footer ul {
+    margin: 0;
+  }
+
+  .hero-area {
+    background-image: url(../img/cover.jpg);
+  }
+
+  .about-section aside blockquote {
+    font-size: 1.5rem;
+  }
+
+  .about-section>.container:nth-child(2) {
+    column-count: 2;
+    column-gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .prices-section div.container {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .prices-section article {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+
+  .services-section>div {
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-section dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .contact-section dl div:nth-child(1) {
+    width: 100%;
+  }
+
+  .appointment-section dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .appointment-section dl div:nth-child(1) {
+    width: 100%;
+  }
+
+  .appointment-section article {
+    background-image: url(../img/beautysalon.jpg);
+    background-size: cover;
+    background-position: right;
+    padding: 5rem 0;
+  }
+
+  .appointment-section article .container {
+    padding-right: 50%;
+  }
+}
